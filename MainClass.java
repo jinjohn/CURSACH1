@@ -32,7 +32,6 @@ public class MainClass
         P=P/12/10;
         return S*(P+(P/(Math.pow(1+P,N)-1)));
     }
-    выдаржлвыражлдтжыдва
 }
 
 
