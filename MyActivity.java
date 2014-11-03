@@ -83,7 +83,7 @@ public class MyActivity extends Activity
 
     public double GetOst (int S, int N, Float P, int i) // остаток на определенном месяце - сумма кнредита, кол-во месяцев, процентная ставка, номер месяца
     {
-        return round((GetEsumm(s, n, p) - (i+1)*GetMinPlat(S,N,P)),2);
+        return round((GetEsumm(S, N, P) - (i+1)*GetMinPlat(S,N,P)),2);
     }
 
     public double GetEsumm (int S, int N, Float P) // итоговая сумма выплат - сумма кредита, кол-во месяцев, процентная ставка
