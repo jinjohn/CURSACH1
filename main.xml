@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?> <!-- версия xml = 1.0 , кодировка = UTF8 -->
+<!-- объявлен линейный холст -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
@@ -6,65 +7,91 @@
               android:layout_height="fill_parent"
               tools:context=".MyActivity"
               android:weightSum="1">
+
+    <!-- текстовое поле-->
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сумма кредита"
-            android:inputType="numberDecimal"/>
+            android:text="Ссуда (руб)"
+            android:inputType="numberDecimal" android:singleLine="true"
+    />
+
+    <!-- поле ввода данных-->
     <EditText
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/EditText01"
-            android:layout_gravity="right"
-            android:inputType="numberSigned"/>
+            android:inputType="numberSigned"
+    />
+
+    <!-- текстовое поле-->
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Срок в месяцах"
-            />
+              android:text="Срок (мес)"
+    />
+
+    <!-- поле ввода данных-->
     <EditText
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:id="@+id/EditText02"
-            android:inputType="numberSigned"/>
+            android:inputType="numberSigned"
+    />
+
+    <!-- текстовое поле-->
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="ставка (%/год)"
-            />
-    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:text="Ставка (%/год)"
+    />
+
+    <!-- поле ввода данных-->
+    <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
               android:ems="10"
               android:numeric="decimal"
               android:id="@+id/EditText03"
-              />
+    />
+
+    <!-- кнопка-->
     <Button
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="расчет"
+            android:text="Расчет"
             android:id="@+id/button"
-            android:onClick="onMyButtonClick"/>
+            android:onClick="onMyButtonClick"
+    />
 
+    <!-- текстовое поле-->
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView"/>
+            android:id="@+id/textView"
+    />
+
+    <!-- поле с вертикальным скроллингом-->
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/scroll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
-            <HorizontalScrollView
+
+         <!-- поле с горизонтальным скроллингом внутри вертикального скроллинга-->
+         <HorizontalScrollView
                     android:id="@+id/hscroll"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent">
+                <!-- текстовое поле внутри вертикального и горизонтального скролловых полей-->
                 <TextView
                         android:id="@+id/text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:isScrollContainer="true"/>
-            </HorizontalScrollView>
-        </ScrollView>
+                        android:isScrollContainer="true"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        />
+         </HorizontalScrollView>
+    </ScrollView>
 </LinearLayout>
 
