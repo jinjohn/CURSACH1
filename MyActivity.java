@@ -7,7 +7,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import org.w3c.dom.Text;
-
 import java.text.BreakIterator;
 
 public class MyActivity extends Activity
