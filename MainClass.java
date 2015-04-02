@@ -5,7 +5,7 @@ import android.view.View;//к программе подключены библи
 import android.widget.EditText;//к программе подключены библиотеки работы с элементами EditText - поля ввода;
 import android.widget.TextView;//к программе подключены библиотеки работы с элементами TextView - поля вывода;
 import android.widget.Toast; //к программе подключены библиотеки всплывающих сообщений;
-public class MyActivity extends Activity    // объявлен клас MyActivity;
+public class MyActivity extends Activity    // объявлен клас MyActivity - основной класс ыполнения программы;
 {                                           //начало блока класса MyActivity;
     EditText Text1, Text2, Text3;           //объявлены переменные типа EditText;
     TextView Text, TextMedium;              //объявлены переменные типа TextView;
@@ -15,7 +15,7 @@ public class MyActivity extends Activity    // объявлен клас MyActiv
     String str = "";                        //объявлена переменная типа строка. Формирование отчета;
     @Override                               //этот метод является переопределением реализации метода из класса,
                                             // который находится выше по иерархии;
-    public void onCreate(Bundle savedInstanceState) //метод при первом запуске программы;
+    public void onCreate(Bundle savedInstanceState) //метод при первом запуске программы - создает на экране элементы интерфейса; 
     {                                               //начало блока метода onCreate;
         super.onCreate(savedInstanceState);         //теперь метод вызывается при создании деятельности;
         setContentView(R.layout.main);              //используется разметка mian.xml;
