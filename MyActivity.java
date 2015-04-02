@@ -1,12 +1,10 @@
 package com.example.CALCANDROID;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.w3c.dom.Text;
 import java.text.BreakIterator;
 
 public class MyActivity extends Activity
@@ -17,17 +15,16 @@ public class MyActivity extends Activity
     float p;
     boolean validate;
     String str = "";
-    @Override
+    @Override       \\поверх
 
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
     }
-    public void onMyButtonClick(View view)
+    public void onMyButtonClick(View view)    \\ по нажатию на кнопку "рассчитать"
     {
-        validate = true;
-        //Text.setText(null);
+        validate = true; \\точка валидации
 
         Text1 = (EditText) findViewById(R.id.EditText01);
         Text2 = (EditText) findViewById(R.id.EditText02);
@@ -65,7 +62,6 @@ public class MyActivity extends Activity
         str = str + "мес: "+(i+1)+"; проц: "+GetProc(s,n,p,i)+"; + долг: " + round((GetMinPlat(s,n,p)-GetProc(s,n,p,i)),2 )+"ост:"+GetOst(s,n,p,i)+";\n";
             }
             Text.setText(str);
-
         }
     }
 
