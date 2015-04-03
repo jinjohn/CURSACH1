@@ -10,12 +10,12 @@ import java.text.BreakIterator;
 public class MyActivity extends Activity
 {
    \\объявление переменных
-    EditText Text1, Text2, Text3;
-    TextView Text, TextMedium;
-    int s , n;
-    float p;
-    boolean validate;
-    String str = "";
+    EditText Text1, Text2, Text3; \\переменные для ввода данных
+    TextView Text, TextMedium; \\переменные для вывода результатов
+    int s , n; \\внутренние переменные s сумма займа, n- кол-во месяцев
+    float p; \\внутренняя переменная p - процент заяма
+    boolean validate; \\внутрення переменная "true-false" - для проверки ввода всех входных данных 
+    String str = ""; \\переменная накопления данных для графика платежей
     @Override       \\поверх
 
     public void onCreate(Bundle savedInstanceState)
