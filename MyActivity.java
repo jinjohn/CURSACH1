@@ -9,6 +9,7 @@ import java.text.BreakIterator;
 
 public class MyActivity extends Activity
 {
+   \\объявление переменных
     EditText Text1, Text2, Text3;
     TextView Text, TextMedium;
     int s , n;
@@ -26,9 +27,9 @@ public class MyActivity extends Activity
     {
         validate = true; \\точка валидации
 
-        Text1 = (EditText) findViewById(R.id.EditText01);
-        Text2 = (EditText) findViewById(R.id.EditText02);
-        Text3 = (EditText) findViewById(R.id.EditText03);
+        Text1 = (EditText) findViewById(R.id.EditText01);\\привязка поля редактрования к переменной
+        Text2 = (EditText) findViewById(R.id.EditText02);\\привязка поля редактрования к переменной
+        Text3 = (EditText) findViewById(R.id.EditText03);\\привязка поля редактрования к переменной
 
         if (Text1.getText().toString().equals(""))
         {Toast.makeText(this, "сумма кредита?", Toast.LENGTH_SHORT).show();
@@ -56,7 +57,6 @@ public class MyActivity extends Activity
         {Text = (TextView) findViewById(R.id.text);
         TextMedium = (TextView) findViewById(R.id.textView);
             TextMedium.setText ("платёж="+GetMinPlat(s,n,p)+"; сумма="+GetEsumm(s, n, p));
-        //Text.setText("выполнено  "+GetMinPlat(a,b,c)+"\n"+GetMinPlat(a,b,c)+"\n" );
             for (int i = 0; i<n; i++)
             {
         str = str + "мес: "+(i+1)+"; проц: "+GetProc(s,n,p,i)+"; + долг: " + round((GetMinPlat(s,n,p)-GetProc(s,n,p,i)),2 )+"ост:"+GetOst(s,n,p,i)+";\n";
